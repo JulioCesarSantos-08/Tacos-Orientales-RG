@@ -1,0 +1,598 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Consulta la carta rápida de Tacos Orientales en Río Grande, Oaxaca. Tacos al pastor, platillos, tortillinas, quesos, carne por kilo y bebidas.">
+  <title>Carta Rápida | Tacos Orientales</title>
+  <link rel="icon" type="image/png" href="imagenes/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/carta.css">
+  <script src="js/carta.js" defer></script>
+</head>
+<body class="pagina-carta">
+
+  <header class="carta-header">
+    <div class="carta-header-interior">
+      <a href="index.html" class="carta-marca" aria-label="Volver al inicio de Tacos Orientales">
+        <img src="imagenes/logo.png" alt="Logotipo de Tacos Orientales">
+        <span class="carta-marca-texto">
+          <strong>TACOS <span>ORIENTALES</span></strong>
+          <small>RÍO GRANDE, OAXACA</small>
+        </span>
+      </a>
+
+      <div class="carta-header-acciones">
+        <a href="menu.html" class="carta-enlace-menu">Menú completo</a>
+        <a href="index.html" class="carta-volver">
+          <span aria-hidden="true">←</span>
+          <span>Volver</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="carta-main">
+
+    <section class="carta-presentacion">
+      <span class="carta-etiqueta">NUESTRA CARTA DIGITAL</span>
+      <h1>Elige tu próximo <span>antojo.</span></h1>
+      <p>Todos nuestros sabores y precios en una carta que puedes hojear.</p>
+      <div class="carta-presentacion-ayuda">
+        <span aria-hidden="true">↔</span>
+        Desliza o utiliza las flechas para pasar las páginas
+      </div>
+    </section>
+
+    <section class="visor-carta" aria-label="Carta interactiva de Tacos Orientales">
+
+      <div class="visor-ambiente" aria-hidden="true"></div>
+
+      <div class="libro-escenario" id="libroEscenario">
+
+        <div class="libro" id="libro" role="region" aria-roledescription="Libro digital" aria-label="Carta de alimentos y bebidas">
+
+          <article class="hoja hoja-portada" data-pagina="0" aria-label="Portada">
+            <div class="hoja-interior portada-interior">
+
+              <div class="portada-decoracion portada-decoracion-uno" aria-hidden="true"></div>
+              <div class="portada-decoracion portada-decoracion-dos" aria-hidden="true"></div>
+
+              <div class="portada-franja">TRADICIÓN · SABOR · CALIDAD</div>
+
+              <div class="portada-contenido">
+                <div class="portada-logo">
+                  <img src="imagenes/logo.png" alt="Tacos Orientales">
+                </div>
+
+                <span class="portada-subtitulo">RÍO GRANDE, OAXACA</span>
+
+                <h2>NUESTRA<br><span>CARTA</span></h2>
+
+                <div class="portada-linea" aria-hidden="true"></div>
+
+                <p>Donde el sabor y la calidad nos distinguen</p>
+              </div>
+
+              <div class="portada-pie">
+                <span>HECHO CON PASIÓN</span>
+                <span>DESDE EL TROMPO HASTA TU MESA</span>
+              </div>
+
+            </div>
+          </article>
+
+          <article class="hoja hoja-tacos" data-pagina="1" aria-label="Tacos al pastor">
+            <div class="hoja-interior">
+
+              <div class="pagina-encabezado">
+                <div class="pagina-marca">
+                  <img src="imagenes/logo.png" alt="">
+                  <span>TACOS ORIENTALES</span>
+                </div>
+                <span class="pagina-capitulo">01 / NUESTRO CLÁSICO</span>
+              </div>
+
+              <div class="pagina-titulo">
+                <span class="pagina-sobretitulo">DIRECTO DEL TROMPO</span>
+                <h2>TACOS <span>AL PASTOR</span></h2>
+                <p>El sabor que nos distingue, en cada orden.</p>
+              </div>
+
+              <div class="tacos-destacado-visual">
+                <div class="tacos-destacado-texto">
+                  <span>RECIÉN PREPARADOS</span>
+                  <strong>¡EL ANTOJO EMPIEZA AQUÍ!</strong>
+                </div>
+                <span class="tacos-destacado-precio">DESDE <strong>$90</strong></span>
+              </div>
+
+              <div class="lista-carta">
+
+                <div class="carta-producto">
+                  <div class="carta-producto-info">
+                    <h3>Tacos al pastor</h3>
+                    <p>Orden de 5 tacos</p>
+                  </div>
+                  <strong class="carta-precio">$90</strong>
+                </div>
+
+                <div class="carta-producto">
+                  <div class="carta-producto-info">
+                    <h3>Tacos al pastor con queso</h3>
+                    <p>Orden de 5 tacos</p>
+                  </div>
+                  <strong class="carta-precio">$100</strong>
+                </div>
+
+                <div class="carta-producto">
+                  <div class="carta-producto-info">
+                    <h3>Tacos al pastor con tortillinas</h3>
+                    <p>Orden de 3 tacos</p>
+                  </div>
+                  <strong class="carta-precio">$90</strong>
+                </div>
+
+                <div class="carta-producto">
+                  <div class="carta-producto-info">
+                    <h3>Tacos al pastor con tortillinas y queso</h3>
+                    <p>Orden de 3 tacos</p>
+                  </div>
+                  <strong class="carta-precio">$100</strong>
+                </div>
+
+              </div>
+
+              <div class="carta-nota-especial">
+                <span aria-hidden="true">✦</span>
+                INGREDIENTES EXTRA
+                <strong>$20</strong>
+              </div>
+
+              <div class="pagina-pie">
+                <span>Donde el sabor y la calidad nos distinguen</span>
+                <span>01</span>
+              </div>
+
+            </div>
+          </article>
+
+          <article class="hoja hoja-platillos" data-pagina="2" aria-label="Platillos especiales">
+            <div class="hoja-interior">
+
+              <div class="pagina-encabezado">
+                <div class="pagina-marca">
+                  <img src="imagenes/logo.png" alt="">
+                  <span>TACOS ORIENTALES</span>
+                </div>
+                <span class="pagina-capitulo">02 / ESPECIALIDADES</span>
+              </div>
+
+              <div class="pagina-titulo pagina-titulo-compacto">
+                <span class="pagina-sobretitulo">PREPARADOS CON NUESTRO TOQUE</span>
+                <h2>PLATILLOS <span>ESPECIALES</span></h2>
+                <p>Todos nuestros platillos a <strong>$170</strong></p>
+              </div>
+
+              <div class="platillos-lista">
+
+                <div class="platillo-fila">
+                  <div>
+                    <h3>Alambre</h3>
+                    <p>Bistec, jamón, cebolla, pimiento y queso.</p>
+                  </div>
+                  <strong>$170</strong>
+                </div>
+
+                <div class="platillo-fila">
+                  <div>
+                    <h3>Vegetariano</h3>
+                    <p>Cebolla, pimiento, jitomate, champiñones, granos de elote, aguacate y queso Chihuahua.</p>
+                  </div>
+                  <strong>$170</strong>
+                </div>
+
+                <div class="platillo-fila">
+                  <div>
+                    <h3>Albañil</h3>
+                    <p>Bistec, jalapeño, champiñones, cebolla y queso.</p>
+                  </div>
+                  <strong>$170</strong>
+                </div>
+
+                <div class="platillo-fila">
+                  <div>
+                    <h3>Gallito</h3>
+                    <p>Bistec, chuleta, pastor, piña, champiñón, pimiento morrón, cebolla, jitomate y queso.</p>
+                  </div>
+                  <strong>$170</strong>
+                </div>
+
+                <div class="platillo-fila">
+                  <div>
+                    <h3>Especial</h3>
+                    <p>Chuleta, jamón, cebolla, champiñones y queso.</p>
+                  </div>
+                  <strong>$170</strong>
+                </div>
+
+                <div class="platillo-fila">
+                  <div>
+                    <h3>Chuleta Suiza</h3>
+                    <p>Chuleta, jamón y queso.</p>
+                  </div>
+                  <strong>$170</strong>
+                </div>
+
+                <div class="platillo-fila">
+                  <div>
+                    <h3>Tamborazo</h3>
+                    <p>Chuleta, pastor, chorizo y queso.</p>
+                  </div>
+                  <strong>$170</strong>
+                </div>
+
+                <div class="platillo-fila">
+                  <div>
+                    <h3>Submarino</h3>
+                    <p>Pastor, chuleta, jamón, chorizo y queso.</p>
+                  </div>
+                  <strong>$170</strong>
+                </div>
+
+                <div class="platillo-fila">
+                  <div>
+                    <h3>Pingüino</h3>
+                    <p>Bistec, chorizo, jamón, champiñones y queso.</p>
+                  </div>
+                  <strong>$170</strong>
+                </div>
+
+              </div>
+
+              <div class="pagina-pie">
+                <span>Donde el sabor y la calidad nos distinguen</span>
+                <span>02</span>
+              </div>
+
+            </div>
+          </article>
+
+          <article class="hoja hoja-tortillinas" data-pagina="3" aria-label="Tortillinas y quesos">
+            <div class="hoja-interior">
+
+              <div class="pagina-encabezado">
+                <div class="pagina-marca">
+                  <img src="imagenes/logo.png" alt="">
+                  <span>TACOS ORIENTALES</span>
+                </div>
+                <span class="pagina-capitulo">03 / MÁS SABOR</span>
+              </div>
+
+              <div class="pagina-titulo pagina-titulo-compacto">
+                <span class="pagina-sobretitulo">PARA TODOS LOS ANTOJOS</span>
+                <h2>CON <span>TORTILLINAS</span></h2>
+              </div>
+
+              <div class="lista-carta lista-carta-compacta">
+
+                <div class="carta-producto">
+                  <div class="carta-producto-info">
+                    <h3>¡Qué me vez!</h3>
+                    <p>Bistec, pastor, jamón, cebolla, morrón, queso y tortillinas.</p>
+                  </div>
+                  <strong class="carta-precio">$170</strong>
+                </div>
+
+                <div class="carta-producto">
+                  <div class="carta-producto-info">
+                    <h3>¡Qué me notas!</h3>
+                    <p>Bistec, pastor, jamón, cebolla, morrón, jitomate, chorizo, queso y tortillinas.</p>
+                  </div>
+                  <strong class="carta-precio">$170</strong>
+                </div>
+
+                <div class="carta-producto">
+                  <div class="carta-producto-info">
+                    <h3>Gringas</h3>
+                    <p>Pastor y queso con tortillinas.</p>
+                  </div>
+                  <strong class="carta-precio">$150</strong>
+                </div>
+
+                <div class="carta-producto">
+                  <div class="carta-producto-info">
+                    <h3>Sincronizadas</h3>
+                    <p>Jamón y queso con tortillinas.</p>
+                  </div>
+                  <strong class="carta-precio">$120</strong>
+                </div>
+
+                <div class="carta-producto">
+                  <div class="carta-producto-info">
+                    <h3>Quesadillas</h3>
+                    <p>Queso con tortillinas.</p>
+                  </div>
+                  <strong class="carta-precio">$110</strong>
+                </div>
+
+              </div>
+
+              <div class="carta-subcategoria">
+                <span>OTRA FORMA DE DISFRUTAR</span>
+                <h3>NUESTROS <em>QUESOS</em></h3>
+              </div>
+
+              <div class="quesos-lista">
+                <div><span>Queso natural</span><strong>$120</strong></div>
+                <div><span>Queso con chorizo</span><strong>$130</strong></div>
+                <div><span>Queso con champiñones</span><strong>$130</strong></div>
+              </div>
+
+              <div class="pagina-pie">
+                <span>Donde el sabor y la calidad nos distinguen</span>
+                <span>03</span>
+              </div>
+
+            </div>
+          </article>
+
+          <article class="hoja hoja-kilos" data-pagina="4" aria-label="Carne al pastor por kilo">
+            <div class="hoja-interior">
+
+              <div class="pagina-encabezado">
+                <div class="pagina-marca">
+                  <img src="imagenes/logo.png" alt="">
+                  <span>TACOS ORIENTALES</span>
+                </div>
+                <span class="pagina-capitulo">04 / PARA COMPARTIR</span>
+              </div>
+
+              <div class="pagina-titulo">
+                <span class="pagina-sobretitulo">EL SABOR QUE SE COMPARTE</span>
+                <h2>CARNE AL PASTOR <span>POR KILO</span></h2>
+                <p>Ideal para disfrutar en familia o con amigos.</p>
+              </div>
+
+              <div class="kilos-cabecera">
+                <span>PORCIÓN</span>
+                <span>NORMAL</span>
+                <span>CON QUESO</span>
+              </div>
+
+              <div class="kilos-lista">
+
+                <div class="kilos-producto">
+                  <strong>1 kg</strong>
+                  <span>$480</span>
+                  <span>$500</span>
+                </div>
+
+                <div class="kilos-producto">
+                  <strong>¾ kg</strong>
+                  <span>$360</span>
+                  <span>$375</span>
+                </div>
+
+                <div class="kilos-producto">
+                  <strong>½ kg</strong>
+                  <span>$240</span>
+                  <span>$250</span>
+                </div>
+
+                <div class="kilos-producto">
+                  <strong>¼ kg</strong>
+                  <span>$120</span>
+                  <span>$125</span>
+                </div>
+
+              </div>
+
+              <div class="kilos-incluye">
+                <span aria-hidden="true">✦</span>
+                <div>
+                  <strong>¡TODO LISTO PARA DISFRUTAR!</strong>
+                  <p>Incluye tortillas, salsa y ensalada.</p>
+                </div>
+              </div>
+
+              <div class="kilos-frase">
+                <span>PARA COMPARTIR</span>
+                <strong>¡QUE NO FALTE EL PASTOR!</strong>
+              </div>
+
+              <div class="pagina-pie">
+                <span>Donde el sabor y la calidad nos distinguen</span>
+                <span>04</span>
+              </div>
+
+            </div>
+          </article>
+
+          <article class="hoja hoja-bebidas" data-pagina="5" aria-label="Bebidas">
+            <div class="hoja-interior">
+
+              <div class="pagina-encabezado">
+                <div class="pagina-marca">
+                  <img src="imagenes/logo.png" alt="">
+                  <span>TACOS ORIENTALES</span>
+                </div>
+                <span class="pagina-capitulo">05 / PARA ACOMPAÑAR</span>
+              </div>
+
+              <div class="pagina-titulo">
+                <span class="pagina-sobretitulo">EL COMPLEMENTO PERFECTO</span>
+                <h2>BEBIDAS <span>REFRESCANTES</span></h2>
+                <p>Elige tu favorita para acompañar tus tacos.</p>
+              </div>
+
+              <div class="bebidas-lista">
+
+                <div class="bebida-producto">
+                  <div>
+                    <h3>Agua de sabor</h3>
+                    <p>Presentación regular</p>
+                  </div>
+                  <strong>$35</strong>
+                </div>
+
+                <div class="bebida-producto">
+                  <div>
+                    <h3>Agua de sabor</h3>
+                    <p>1 litro</p>
+                  </div>
+                  <strong>$50</strong>
+                </div>
+
+                <div class="bebida-producto">
+                  <div>
+                    <h3>Agua natural</h3>
+                    <p>600 ml</p>
+                  </div>
+                  <strong>$20</strong>
+                </div>
+
+                <div class="bebida-producto">
+                  <div>
+                    <h3>Refresco</h3>
+                    <p>Presentación regular</p>
+                  </div>
+                  <strong>$30</strong>
+                </div>
+
+                <div class="bebida-producto">
+                  <div>
+                    <h3>Refresco</h3>
+                    <p>600 ml</p>
+                  </div>
+                  <strong>$40</strong>
+                </div>
+
+                <div class="bebida-producto">
+                  <div>
+                    <h3>Refresco</h3>
+                    <p>3 litros</p>
+                  </div>
+                  <strong>$80</strong>
+                </div>
+
+              </div>
+
+              <div class="bebidas-mensaje">
+                <span aria-hidden="true">✦</span>
+                <p>¡El mejor acompañante para un buen taco!</p>
+              </div>
+
+              <div class="pagina-pie">
+                <span>Donde el sabor y la calidad nos distinguen</span>
+                <span>05</span>
+              </div>
+
+            </div>
+          </article>
+
+          <article class="hoja hoja-contraportada" data-pagina="6" aria-label="Contacto y pedidos">
+            <div class="hoja-interior contraportada-interior">
+
+              <div class="contraportada-logo">
+                <img src="imagenes/logo.png" alt="Tacos Orientales">
+              </div>
+
+              <span class="contraportada-etiqueta">¿YA SE TE ANTOJÓ?</span>
+
+              <h2>¡HAZ TU <span>PEDIDO!</span></h2>
+
+              <p>Disfruta el auténtico sabor de Tacos Orientales. También contamos con servicio a domicilio.</p>
+
+              <div class="contraportada-contactos">
+                <a href="tel:9542045949">
+                  <span>LLÁMANOS</span>
+                  <strong>954 204 5949</strong>
+                </a>
+                <a href="tel:9542039949">
+                  <span>OTRA LÍNEA DE PEDIDOS</span>
+                  <strong>954 203 9949</strong>
+                </a>
+              </div>
+
+              <div class="contraportada-ubicacion">
+                <span aria-hidden="true">⌖</span>
+                <p>Frente a las Canchas Gemelas<br>Río Grande, Oaxaca</p>
+              </div>
+
+              <div class="contraportada-redes">
+                <a href="https://www.facebook.com/share/17wZbi43VV/" target="_blank" rel="noopener noreferrer">Visitar Facebook ↗</a>
+                <a href="https://maps.app.goo.gl/vAsBnr1FYgT1dstn9?g_st=aw" target="_blank" rel="noopener noreferrer">Cómo llegar ↗</a>
+              </div>
+
+              <div class="contraportada-eslogan">
+                “Donde el sabor y la calidad nos distinguen”
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <nav class="libro-controles" aria-label="Controles de la carta">
+
+        <button type="button" class="libro-control libro-anterior" id="paginaAnterior" aria-label="Página anterior">
+          <span aria-hidden="true">←</span>
+          <span>Anterior</span>
+        </button>
+
+        <div class="libro-estado" aria-live="polite" aria-atomic="true">
+          <span class="libro-estado-etiqueta" id="nombrePagina">Portada</span>
+          <span class="libro-estado-numero" id="numeroPagina">1 de 7</span>
+        </div>
+
+        <button type="button" class="libro-control libro-siguiente" id="paginaSiguiente" aria-label="Página siguiente">
+          <span>Siguiente</span>
+          <span aria-hidden="true">→</span>
+        </button>
+
+      </nav>
+
+      <div class="libro-progreso" id="progresoPaginas" aria-label="Progreso de lectura">
+        <button type="button" class="libro-punto activo" data-ir-pagina="0" aria-label="Ir a portada"></button>
+        <button type="button" class="libro-punto" data-ir-pagina="1" aria-label="Ir a tacos al pastor"></button>
+        <button type="button" class="libro-punto" data-ir-pagina="2" aria-label="Ir a platillos"></button>
+        <button type="button" class="libro-punto" data-ir-pagina="3" aria-label="Ir a tortillinas y quesos"></button>
+        <button type="button" class="libro-punto" data-ir-pagina="4" aria-label="Ir a carne por kilo"></button>
+        <button type="button" class="libro-punto" data-ir-pagina="5" aria-label="Ir a bebidas"></button>
+        <button type="button" class="libro-punto" data-ir-pagina="6" aria-label="Ir a contacto y pedidos"></button>
+      </div>
+
+    </section>
+
+    <section class="carta-atajos">
+      <div class="carta-atajos-interior">
+        <div class="carta-atajos-texto">
+          <span>¿QUIERES CONOCER MÁS?</span>
+          <h2>Explora todos nuestros sabores</h2>
+          <p>Consulta ingredientes, categorías y más detalles en nuestro menú digital completo.</p>
+        </div>
+
+        <div class="carta-atajos-botones">
+          <a href="menu.html" class="atajo-boton atajo-principal">Ver menú completo <span aria-hidden="true">↗</span></a>
+          <a href="https://www.facebook.com/share/17wZbi43VV/" class="atajo-boton atajo-facebook" target="_blank" rel="noopener noreferrer">Visitar Facebook <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="carta-footer">
+    <div class="carta-footer-interior">
+      <span>© <span id="anioActual"></span> Tacos Orientales</span>
+      <span>Río Grande, Oaxaca · Donde el sabor y la calidad nos distinguen</span>
+    </div>
+  </footer>
+
+</body>
+</html>

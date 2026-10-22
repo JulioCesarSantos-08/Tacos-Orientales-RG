@@ -1,0 +1,594 @@
+
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Conoce Tacos Orientales en Río Grande, Oaxaca. Descubre nuestra carta rápida, menú completo, tacos al pastor, platillos especiales y pedidos a domicilio.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tacos Orientales | Río Grande, Oaxaca">
+  <meta property="og:description" content="Donde el sabor y la calidad nos distinguen. Consulta nuestra carta rápida, explora el menú y realiza tus pedidos a domicilio.">
+  <meta property="og:image" content="imagenes/logo.png">
+  <title>Tacos Orientales | Río Grande, Oaxaca</title>
+  <link rel="icon" href="imagenes/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="imagenes/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/bienvenida.css">
+  <link rel="stylesheet" href="css/videos.css">
+  <style>
+    .accesos-menu {
+      padding: 66px 0;
+      background: #f7f6f0;
+      color: #141b15;
+    }
+
+    .accesos-menu-encabezado {
+      max-width: 660px;
+      margin: 0 auto 30px;
+      text-align: center;
+    }
+
+    .accesos-menu-encabezado > span {
+      color: #078b36;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.7px;
+    }
+
+    .accesos-menu-encabezado h2 {
+      margin: 12px 0;
+      font-family: "Outfit", sans-serif;
+      font-size: clamp(30px, 6vw, 45px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .accesos-menu-encabezado h2 span {
+      color: #008f36;
+    }
+
+    .accesos-menu-encabezado p {
+      margin: 0;
+      color: #647065;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .accesos-menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .acceso-menu-tarjeta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 0;
+      min-height: 245px;
+      padding: 25px;
+      border: 1px solid #e2e8df;
+      border-radius: 18px;
+      background: #fff;
+      color: #142018;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .acceso-menu-tarjeta:first-child {
+      border-color: #009c3a;
+      background: linear-gradient(145deg, #0e2c18, #08150d);
+      color: #fff;
+    }
+
+    .acceso-menu-icono {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 20px;
+      border-radius: 13px;
+      background: #e8f7ec;
+      color: #078b36;
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .acceso-menu-tarjeta:first-child .acceso-menu-icono {
+      background: rgba(0, 166, 60, .2);
+      color: #50ee85;
+    }
+
+    .acceso-menu-tarjeta h3 {
+      margin: 0 0 9px;
+      font-family: "Outfit", sans-serif;
+      font-size: 23px;
+      font-weight: 900;
+      line-height: 1.15;
+    }
+
+    .acceso-menu-tarjeta p {
+      flex: 1;
+      margin: 0 0 22px;
+      color: #667267;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .acceso-menu-tarjeta:first-child p {
+      color: #b8d4c0;
+    }
+
+    .acceso-menu-accion {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+      color: #078b36;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .acceso-menu-tarjeta:first-child .acceso-menu-accion {
+      color: #59ec89;
+    }
+
+    .acceso-menu-accion span:last-child {
+      font-size: 20px;
+    }
+
+    .hero-acciones {
+      flex-wrap: wrap;
+    }
+
+    .hero-acciones .boton {
+      text-align: center;
+    }
+
+    .hero-facebook {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #e2eae4;
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+
+    .footer-red-social {
+      color: #65e68d;
+      font-weight: 800;
+    }
+
+    @media (hover: hover) {
+      .acceso-menu-tarjeta:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, .1);
+      }
+    }
+
+    @media (max-width: 850px) {
+      .accesos-menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .acceso-menu-tarjeta:last-child {
+        grid-column: 1 / -1;
+        min-height: 190px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .accesos-menu {
+        padding: 48px 0;
+      }
+
+      .accesos-menu-encabezado {
+        margin-bottom: 24px;
+      }
+
+      .accesos-menu-encabezado p {
+        font-size: 13px;
+      }
+
+      .accesos-menu-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+      }
+
+      .acceso-menu-tarjeta,
+      .acceso-menu-tarjeta:last-child {
+        grid-column: auto;
+        min-height: 0;
+        padding: 22px;
+      }
+
+      .acceso-menu-icono {
+        width: 43px;
+        height: 43px;
+        margin-bottom: 14px;
+      }
+
+      .acceso-menu-tarjeta h3 {
+        font-size: 21px;
+      }
+
+      .acceso-menu-tarjeta p {
+        margin-bottom: 16px;
+      }
+
+      .hero-acciones {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .hero-acciones .boton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 49px;
+      }
+
+      .hero-facebook {
+        justify-content: center;
+        min-height: 38px;
+        margin-top: 3px;
+      }
+    }
+  </style>
+  <script src="js/bienvenida.js" defer></script>
+  <script src="js/videos.js" defer></script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <div class="bienvenida" id="bienvenida" aria-hidden="true">
+    <div class="bienvenida-contenido">
+      <div class="bienvenida-circulo">
+        <img src="imagenes/logo.png" alt="Tacos Orientales">
+      </div>
+      <p class="bienvenida-etiqueta">RÍO GRANDE, OAXACA</p>
+      <h2>El auténtico sabor<br><span>de nuestra tradición</span></h2>
+      <div class="bienvenida-progreso"><span></span></div>
+      <button class="bienvenida-saltar" id="saltarBienvenida" type="button">Saltar presentación</button>
+    </div>
+  </div>
+
+  <div class="barra-superior">
+    <span>Frente a las Canchas Gemelas · Río Grande, Oaxaca</span>
+    <a href="https://maps.app.goo.gl/vAsBnr1FYgT1dstn9?g_st=aw" target="_blank" rel="noopener noreferrer">Cómo llegar ↗</a>
+  </div>
+
+  <header class="header" id="inicio">
+    <nav class="navegacion contenedor" aria-label="Navegación principal">
+      <a href="#inicio" class="marca" aria-label="Tacos Orientales, inicio">
+        <img src="imagenes/logo.png" alt="Logotipo de Tacos Orientales">
+        <span class="marca-texto">
+          <strong>TACOS <span>ORIENTALES</span></strong>
+          <small>RÍO GRANDE, OAXACA</small>
+        </span>
+      </a>
+
+      <div class="nav-enlaces" id="navEnlaces">
+        <a href="#inicio">Inicio</a>
+        <a href="carta.html">Carta rápida</a>
+        <a href="menu.html">Menú completo</a>
+        <a href="#especialidades">Especialidades</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+        <a href="https://www.facebook.com/share/17wZbi43VV/" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+      </div>
+
+      <a href="carta.html" class="boton boton-nav">Ver carta <span>↗</span></a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navEnlaces">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-fondo"></div>
+      <div class="hero-brillo"></div>
+      <div class="contenedor hero-contenido">
+        <div class="hero-informacion">
+          <span class="etiqueta-seccion"><span class="punto-verde"></span> TRADICIÓN Y SABOR EN CADA BOCADO</span>
+          <h1>EL SABOR QUE <span>SIEMPRE</span> SE ANTOJA.</h1>
+          <p>Disfruta nuestros tacos al pastor, platillos especiales y ese sabor que nos distingue en Río Grande, Oaxaca.</p>
+
+          <div class="hero-acciones">
+            <a href="carta.html" class="boton boton-primario">Ver carta rápida <span>↗</span></a>
+            <a href="menu.html" class="boton boton-secundario">Explorar menú completo <span>↗</span></a>
+            <a href="#pedidos" class="boton boton-secundario">Pedir a domicilio</a>
+            <a href="https://www.facebook.com/share/17wZbi43VV/" target="_blank" rel="noopener noreferrer" class="hero-facebook">Síguenos en Facebook ↗</a>
+          </div>
+
+          <div class="hero-detalles">
+            <div><span class="detalle-icono">✦</span><span>Preparado con sabor</span></div>
+            <div><span class="detalle-icono">✦</span><span>Pedidos a domicilio</span></div>
+          </div>
+        </div>
+
+        <div class="hero-imagen">
+          <div class="hero-imagen-marco">
+            <img src="imagenes/tacos-pastor.jpg" alt="Orden de tacos al pastor de Tacos Orientales" fetchpriority="high">
+          </div>
+          <div class="hero-sello">
+            <span>HECHOS CON</span>
+            <strong>PASIÓN</strong>
+            <span>Y SABOR</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-pie">
+        <span>DESLIZA PARA DESCUBRIR</span>
+        <span>↓</span>
+      </div>
+    </section>
+
+    <section class="franja-eslogan">
+      <div class="contenedor">
+        <span>✦</span>
+        <p>DONDE EL SABOR Y LA CALIDAD NOS DISTINGUEN</p>
+        <span>✦</span>
+      </div>
+    </section>
+
+    <section class="accesos-menu" id="nuestras-cartas">
+      <div class="contenedor">
+        <div class="accesos-menu-encabezado">
+          <span>ELIGE CÓMO VER NUESTRO MENÚ</span>
+          <h2>TU ANTOJO, <span>A TU MANERA.</span></h2>
+          <p>Consulta nuestros platillos y precios en segundos. Tenemos dos formas de explorar todo lo que preparamos para ti.</p>
+        </div>
+
+        <div class="accesos-menu-grid">
+          <a href="carta.html" class="acceso-menu-tarjeta">
+            <span class="acceso-menu-icono" aria-hidden="true">▤</span>
+            <h3>Carta rápida</h3>
+            <p>Consulta toda nuestra carta como si tuvieras el menú físico en tus manos. Desliza para pasar las páginas.</p>
+            <span class="acceso-menu-accion">ABRIR CARTA <span>↗</span></span>
+          </a>
+
+          <a href="menu.html" class="acceso-menu-tarjeta">
+            <span class="acceso-menu-icono" aria-hidden="true">☷</span>
+            <h3>Menú completo</h3>
+            <p>Explora nuestras categorías, conoce los ingredientes y encuentra fácilmente lo que más se te antoje.</p>
+            <span class="acceso-menu-accion">EXPLORAR MENÚ <span>↗</span></span>
+          </a>
+
+          <a href="https://www.facebook.com/share/17wZbi43VV/" target="_blank" rel="noopener noreferrer" class="acceso-menu-tarjeta">
+            <span class="acceso-menu-icono" aria-hidden="true">f</span>
+            <h3>Facebook</h3>
+            <p>Síguenos para conocer nuestras publicaciones, novedades y todo lo que sucede en Tacos Orientales.</p>
+            <span class="acceso-menu-accion">VISITAR FACEBOOK <span>↗</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="videos-seccion" id="videos" hidden>
+  <div class="contenedor">
+    <div class="videos-encabezado">
+      <span class="videos-etiqueta">DESDE NUESTRA COCINA</span>
+      <h2>ASÍ SE VIVE <span>NUESTRO SABOR.</span></h2>
+      <p>
+        Conoce de cerca cómo preparamos nuestras especialidades,
+        el auténtico sabor del pastor y los momentos que se viven
+        en Tacos Orientales.
+      </p>
+    </div>
+
+    <div class="videos-grid" id="videosGrid" aria-label="Videos de Tacos Orientales"></div>
+  </div>
+</section>
+
+    <section class="seccion especialidades" id="especialidades">
+      <div class="contenedor">
+        <div class="seccion-encabezado">
+          <div>
+            <span class="etiqueta-seccion etiqueta-oscura">NUESTROS FAVORITOS</span>
+            <h2>ANTOJOS QUE <span>ENAMORAN.</span></h2>
+          </div>
+          <a href="carta.html" class="enlace-flecha">Ver carta rápida <span>↗</span></a>
+        </div>
+
+        <div class="especialidades-grid">
+          <article class="especialidad-card especialidad-principal">
+            <div class="especialidad-foto">
+              <img src="imagenes/tacos-pastor.jpg" alt="Tacos al pastor" loading="lazy">
+            </div>
+            <div class="especialidad-info">
+              <span class="producto-etiqueta">EL CLÁSICO DE LA CASA</span>
+              <h3>Tacos al pastor</h3>
+              <p>Una tradición llena de sabor. Orden de cinco tacos.</p>
+              <div class="producto-pie">
+                <strong>$90 MXN</strong>
+                <a href="menu.html" aria-label="Ver tacos al pastor en el menú">↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="especialidad-card">
+            <div class="especialidad-foto">
+              <img src="imagenes/platillo.jpg" alt="Platillo especial de Tacos Orientales" loading="lazy">
+            </div>
+            <div class="especialidad-info">
+              <span class="producto-etiqueta">PARA UN GRAN ANTOJO</span>
+              <h3>Platillos especiales</h3>
+              <p>Variedad de ingredientes y combinaciones para disfrutar.</p>
+              <div class="producto-pie">
+                <strong>Desde $170</strong>
+                <a href="menu.html" aria-label="Ver platillos especiales">↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="especialidad-card">
+            <div class="especialidad-foto">
+              <img src="imagenes/trompo.jpg" alt="Trompo de carne al pastor" loading="lazy">
+            </div>
+            <div class="especialidad-info">
+              <span class="producto-etiqueta">EL SABOR DE LA TRADICIÓN</span>
+              <h3>Carne al pastor</h3>
+              <p>Disfruta nuestro pastor también en presentaciones por kilo.</p>
+              <div class="producto-pie">
+                <strong>Desde $120</strong>
+                <a href="menu.html" aria-label="Ver carne al pastor por kilo">↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion nosotros" id="nosotros">
+      <div class="contenedor nosotros-grid">
+        <div class="nosotros-imagen">
+          <img src="imagenes/trompo.jpg" alt="Preparación de carne al pastor en Tacos Orientales" loading="lazy">
+          <div class="nosotros-sello">SABOR<br>ORIENTAL</div>
+        </div>
+
+        <div class="nosotros-contenido">
+          <span class="etiqueta-seccion">CONOCE NUESTRA ESENCIA</span>
+          <h2>EL BUEN SABOR <span>NOS REÚNE.</span></h2>
+          <p>En Tacos Orientales nos encanta compartir buenos momentos alrededor de una comida llena de sabor.</p>
+          <p>Ven a visitarnos frente a las Canchas Gemelas, en Río Grande, Oaxaca, y descubre las especialidades que tenemos para ti.</p>
+          <a href="https://maps.app.goo.gl/vAsBnr1FYgT1dstn9?g_st=aw" target="_blank" rel="noopener noreferrer" class="boton boton-primario">Visítanos <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion pedidos" id="pedidos">
+      <div class="contenedor pedidos-contenido">
+        <div>
+          <span class="etiqueta-seccion">¿SE TE ANTOJARON?</span>
+          <h2>¡EL SABOR VA <span>HASTA TI!</span></h2>
+          <p>Haz tu pedido a domicilio comunicándote con cualquiera de nuestros dos números de atención.</p>
+        </div>
+
+        <div class="pedidos-opciones">
+          <a href="https://wa.me/529542045949?text=Hola%2C%20quiero%20hacer%20un%20pedido%20a%20domicilio." target="_blank" rel="noopener noreferrer" class="pedido-whatsapp">
+            <span class="pedido-icono">✆</span>
+            <span>
+              <small>PEDIDOS POR WHATSAPP</small>
+              <strong>954 204 5949</strong>
+            </span>
+            <span class="pedido-flecha">↗</span>
+          </a>
+
+          <a href="https://wa.me/529542039949?text=Hola%2C%20quiero%20hacer%20un%20pedido%20a%20domicilio." target="_blank" rel="noopener noreferrer" class="pedido-whatsapp">
+            <span class="pedido-icono">✆</span>
+            <span>
+              <small>PEDIDOS POR WHATSAPP</small>
+              <strong>954 203 9949</strong>
+            </span>
+            <span class="pedido-flecha">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion experiencia" id="experiencia">
+      <div class="contenedor experiencia-grid">
+        <div class="experiencia-texto">
+          <span class="etiqueta-seccion etiqueta-oscura">TU OPINIÓN NOS IMPORTA</span>
+          <h2>¿TE GUSTÓ <span>NUESTRO SABOR?</span></h2>
+          <p>Nos encanta conocer tu experiencia. Tu opinión nos ayuda a mejorar y a que más personas descubran Tacos Orientales.</p>
+          <a href="https://maps.app.goo.gl/vAsBnr1FYgT1dstn9?g_st=aw" target="_blank" rel="noopener noreferrer" class="boton boton-oscuro">Déjanos una reseña <span>↗</span></a>
+        </div>
+
+        <div class="experiencia-like">
+          <div class="like-decoracion">♥</div>
+          <h3>¿Te encanta Tacos Orientales?</h3>
+          <p>Déjanos tu apoyo con un me gusta.</p>
+          <button class="boton-like" id="botonLike" type="button" aria-pressed="false">
+            <span>♥</span> Me gusta
+          </button>
+          <div class="like-contador">
+            <strong id="totalLikes">—</strong>
+            <span>personas nos han dado su apoyo</span>
+          </div>
+          <p class="like-mensaje" id="likeMensaje" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion ubicacion" id="contacto">
+      <div class="contenedor ubicacion-grid">
+        <div>
+          <span class="etiqueta-seccion">ENCUÉNTRANOS</span>
+          <h2>TE ESPERAMOS <span>CON MUCHO SABOR.</span></h2>
+
+          <div class="ubicacion-dato">
+            <span class="ubicacion-icono">⌖</span>
+            <div>
+              <strong>Nuestra ubicación</strong>
+              <p>Frente a las Canchas Gemelas, Río Grande, Oaxaca.</p>
+            </div>
+          </div>
+
+          <div class="ubicacion-dato">
+            <span class="ubicacion-icono">✆</span>
+            <div>
+              <strong>Pedidos y contacto</strong>
+              <p>954 204 5949 / 954 203 9949</p>
+            </div>
+          </div>
+
+          <a href="https://maps.app.goo.gl/vAsBnr1FYgT1dstn9?g_st=aw" target="_blank" rel="noopener noreferrer" class="boton boton-primario">Abrir Google Maps <span>↗</span></a>
+        </div>
+
+        <div class="ubicacion-tarjeta">
+          <span class="ubicacion-tarjeta-etiqueta">RÍO GRANDE · OAXACA</span>
+          <img src="imagenes/logo.png" alt="Tacos Orientales">
+          <h3>¡AQUÍ NOS VEMOS!</h3>
+          <p>Frente a las Canchas Gemelas</p>
+          <a href="https://maps.app.goo.gl/vAsBnr1FYgT1dstn9?g_st=aw" target="_blank" rel="noopener noreferrer">Ver ubicación ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="contenedor footer-principal">
+      <div class="footer-marca">
+        <img src="imagenes/logo.png" alt="Tacos Orientales">
+        <div>
+          <strong>TACOS ORIENTALES</strong>
+          <p>Donde el sabor y la calidad nos distinguen.</p>
+        </div>
+      </div>
+
+      <div class="footer-enlaces">
+        <a href="#inicio">Inicio</a>
+        <a href="carta.html">Carta rápida</a>
+        <a href="menu.html">Menú completo</a>
+        <a href="#pedidos">Pedidos</a>
+        <a href="#contacto">Ubicación</a>
+        <a href="https://www.facebook.com/share/17wZbi43VV/" target="_blank" rel="noopener noreferrer" class="footer-red-social">Facebook ↗</a>
+      </div>
+    </div>
+
+    <div class="contenedor footer-inferior">
+      <span>© <span id="anioActual"></span> Tacos Orientales. Todos los derechos reservados.</span>
+      <span>Río Grande, Oaxaca, México.</span>
+    </div>
+  </footer>
+
+  <a href="#pedidos" class="whatsapp-flotante" aria-label="Hacer pedido a domicilio">✆ <span>Haz tu pedido</span></a>
+</body>
+</html>
